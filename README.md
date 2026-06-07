@@ -37,6 +37,10 @@ The pipeline is fully operational. Below are demonstrations of the automated wor
 *(This screenshot illustrates the environment protection rules in action, showing the pipeline paused and awaiting manual authorization before deploying to the staging environment).*
 ![Manual Approval](assets/manual-approval.png)
 
+### 4. Artifact Management & Retention
+*(This screenshot highlights the automated generation and storage of distinct build artifacts, including Helm charts, K8s cluster configurations, and Python builds, corresponding to each matrix environment).*
+![Artifacts](assets/artifacts.png)
+
 ## 🚀 Getting Started
 
 To explore the Helm configurations or deploy this stack to your own cluster:
