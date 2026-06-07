@@ -1,55 +1,67 @@
-# Django ToDo list
+# 🚀 Production-Ready CI/CD & Kubernetes Deployment
+**Architected and implemented by Leonid Lachmann**
 
-This is a to-do list web application with the basic features of most web apps, such as accounts/login, API, and interactive UI. 
-To complete this task, you will need:
+This repository showcases a comprehensive, enterprise-grade CI/CD pipeline and Kubernetes deployment strategy for a monolithic Django web application. It transitions traditional deployments into a modern, automated, and scalable cloud-native workflow utilizing GitHub Actions, Docker, and Helm.
 
-- CSS | [Skeleton](http://getskeleton.com/)
-- JS  | [jQuery](https://jquery.com/)
+## ⚙️ DevOps Features & Architecture
 
-## Explore
+### 🔄 Advanced CI/CD Pipeline (GitHub Actions)
+* **Matrix Testing:** Engineered a complex testing matrix running unit tests across multiple Python versions (3.8, 3.9) and Operating Systems (Ubuntu, Windows) simultaneously.
+* **Code Quality & Linting:** Automated test coverage reporting (`coverage`) and enforced code complexity limits using `flake8`.
+* **Reusable Workflows:** Followed DRY principles by implementing `reusable-deployment.yml` to standardize Helm deployments across both `development` and `staging` environments.
+* **Concurrency Control:** Implemented workflow concurrency limits and auto-cancellation of redundant in-progress runs to optimize runner resources.
+* **Branch Protection & Governance:** Enforced strict branch protection on `main`, requiring successful status checks and Pull Requests before merging.
+* **Manual Approvals:** Configured secure deployment gating with mandatory manual approvals for the `staging` environment.
 
-Follow these steps to get the application up and running on your local machine (requires Python 3.8 or higher due to compatibility with Django 4):
+### ☸️ Kubernetes & Helm Orchestration
+* **Helm Chart Packaging:** Packaged the Django application and a MySQL StatefulSet into a cohesive Helm chart (`todoapp`) for templated, version-controlled deployments.
+* **Environment Parity:** Managed environment-specific configurations via separate `values.yaml` and `stg.yaml` override files.
+* **Ephemeral Testing Environments:** Integrated `kind` (Kubernetes IN Docker) within the CI/CD pipeline to spin up temporary clusters and perform dry-run Helm deployments before executing actual upgrades.
+* **Cloud-Native Resources:** Configured comprehensive K8s manifests including `StatefulSet` for databases, `Deployment` for the app, `PersistentVolumeClaims` (PVC) for data retention, and `Ingress` for traffic routing.
+* **Auto-Scaling:** Configured Horizontal Pod Autoscaler (HPA) to scale application replicas based on CPU and memory utilization.
+* **Secret Management:** Secured sensitive database credentials and application keys by dynamically injecting GitHub Secrets during the `helm upgrade` process.
 
+## 📊 Proof of Execution
 
-```
-pip install -r requirements.txt
-```
+The pipeline is fully operational. Below are demonstrations of the automated workflow, security checks, and deployment processes.
 
-Create a database schema:
+### 1. Matrix Testing & Workflow Success
+*(This screenshot demonstrates the successful execution of the entire GitHub Actions pipeline, highlighting the matrix builds and artifact generation).*
+![Matrix Testing](assets/matrix-success.png)
 
-```
-python manage.py migrate
-```
+### 2. Branch Protection & PR Status Checks
+*(This screenshot verifies that branch protection rules are active, preventing direct merges to the main branch until all CI status checks are fully resolved).*
+![Branch Protection](assets/branch-protection.png)
 
-And then start the server (default is <http://localhost:8000>):
+### 3. Manual Approval Gate for Staging
+*(This screenshot illustrates the environment protection rules in action, showing the pipeline paused and awaiting manual authorization before deploying to the staging environment).*
+![Manual Approval](assets/manual-approval.png)
 
-```
-python manage.py runserver
-```
+## 🚀 Getting Started
 
-You can now browse the [API](http://localhost:8000/api/) or start on the [landing page](http://localhost:8000/).
+To explore the Helm configurations or deploy this stack to your own cluster:
 
-## Task
+### Prerequisites
+* [Docker](https://docs.docker.com/get-docker/) & [Kubernetes](https://kubernetes.io/docs/setup/) (e.g., Minikube, KinD, or a managed cloud K8s).
+* [Helm](https://helm.sh/docs/intro/install/) package manager.
 
-Extend the project's GitHub Actions workflow by integrating Docker to build and push images to DockerHub.
-This CI/CD enhancement involves several key tasks:
+### Local Helm Deployment
 
-1. Update your forked repository with your DockerHub username and password.
-    1. Add corresponding secrets to the repository.
-2. Update `DockerImageName` with the DockerHub image repository name.
-3. Add environment secrets for `development` and `staging` environments for your forked repository.
-4. Use Matrix to run unit tests on different Python versions (3.8, 3.9).
-5. Use Matrix to run unit tests on different OS types: Ubuntu and Windows.
-6. You should have the ability to start the workflow manually.
-7. Add input variables for the manual workflow start:
-    1. Input variables to choose which artifact from the matrix to deploy. (windows-3.8, ubuntu-3.9, etc).
-8. Add branch protection to the main branch in your fork.
-9. Add mandatory pull requests and `Python CI` job status checks for PRs.
-10. Add Manual Approval for the `staging` environment.
-11. Allow to run only one workflow per pull request (concurrency).
-12. New runs should cancel the previous runs.
-13. Create a Pull Request with the changes.
-14. Pull Requests description should also contain a reference to a workflow run with successful
-workflow execution.
-15. Provide screenshots confirming that branch protection and status checks are working as expected.
-16. Provide a screenshot confirming `staging` deployment requires manual approval.
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/leoleiden/production-ready-cicd-django.git](https://github.com/leoleiden/production-ready-cicd-django.git)
+   cd production-ready-cicd-django/helm-charts
+   ```
+
+2. **Install the Helm chart (Dry-run to test manifests)**
+   ```bash
+   helm install my-todoapp ./todoapp --dry-run
+   ```
+
+3. **Deploy to the cluster**
+   ```bash
+   helm install my-todoapp ./todoapp
+   ```
+
+---
+*A special thanks to Illia Losiev for his mentorship, valuable feedback, and code reviews during the development of this infrastructure setup.*

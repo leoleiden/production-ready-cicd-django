@@ -1,0 +1,183 @@
+‘âàãªâãà  ¯ ¯®ª â®¬  Windows 10
+‘¥à¨©­ë© ­®¬¥à â®¬ : 00000060 2450:3723
+C:\USERS\LEIDENLOKI\CICD_PIPELINE-MAIN
+³   bootstrap.sh
+³   cluster.yml
+³   LICENSE
+³   README.md
+³   tree.txt
+³   
+ÃÄÄÄ.github
+³   ÀÄÄÄworkflows
+³           main.yml
+³           reusable-deployment.yml
+³           
+ÃÄÄÄhelm-charts
+³   ÀÄÄÄtodoapp
+³       ³   .helmignore
+³       ³   Chart.yaml
+³       ³   values.yaml
+³       ³   
+³       ÃÄÄÄcharts
+³       ³   ÀÄÄÄmysql
+³       ³       ³   .helmignore
+³       ³       ³   Chart.yaml
+³       ³       ³   values.yaml
+³       ³       ³   
+³       ³       ÀÄÄÄtemplates
+³       ³               configMap.yml
+³       ³               ns.yml
+³       ³               secret.yml
+³       ³               service.yml
+³       ³               statefulSet.yml
+³       ³               
+³       ÃÄÄÄtemplates
+³       ³       clusterIp.yml
+³       ³       configMap.yml
+³       ³       deployment.yml
+³       ³       hpa.yml
+³       ³       ingress.yml
+³       ³       nodeport.yml
+³       ³       ns.yml
+³       ³       secret.yml
+³       ³       
+³       ÀÄÄÄvalues
+³               stg.yaml
+³               
+ÀÄÄÄsrc
+    ³   .coverage
+    ³   Dockerfile
+    ³   manage.py
+    ³   requirements.txt
+    ³   
+    ÃÄÄÄaccounts
+    ³   ³   admin.py
+    ³   ³   forms.py
+    ³   ³   models.py
+    ³   ³   tests.py
+    ³   ³   urls.py
+    ³   ³   views.py
+    ³   ³   __init__.py
+    ³   ³   
+    ³   ÃÄÄÄmigrations
+    ³   ³   ³   __init__.py
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄ__pycache__
+    ³   ³           __init__.cpython-311.pyc
+    ³   ³           
+    ³   ÃÄÄÄtemplates
+    ³   ³   ÀÄÄÄaccounts
+    ³   ³           login.html
+    ³   ³           register.html
+    ³   ³           
+    ³   ÀÄÄÄ__pycache__
+    ³           admin.cpython-311.pyc
+    ³           forms.cpython-311.pyc
+    ³           models.cpython-311.pyc
+    ³           tests.cpython-311.pyc
+    ³           urls.cpython-311.pyc
+    ³           views.cpython-311.pyc
+    ³           __init__.cpython-311.pyc
+    ³           
+    ÃÄÄÄapi
+    ³   ³   serializers.py
+    ³   ³   tests.py
+    ³   ³   urls.py
+    ³   ³   views.py
+    ³   ³   __init__.py
+    ³   ³   
+    ³   ÃÄÄÄmigrations
+    ³   ³   ³   __init__.py
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄ__pycache__
+    ³   ³           __init__.cpython-311.pyc
+    ³   ³           
+    ³   ÀÄÄÄ__pycache__
+    ³           serializers.cpython-311.pyc
+    ³           tests.cpython-311-pytest-8.2.0.pyc
+    ³           tests.cpython-311.pyc
+    ³           urls.cpython-311.pyc
+    ³           views.cpython-311.pyc
+    ³           __init__.cpython-311.pyc
+    ³           
+    ÃÄÄÄlists
+    ³   ³   admin.py
+    ³   ³   forms.py
+    ³   ³   models.py
+    ³   ³   tests.py
+    ³   ³   urls.py
+    ³   ³   views.py
+    ³   ³   __init__.py
+    ³   ³   
+    ³   ÃÄÄÄmigrations
+    ³   ³   ³   0001_initial.py
+    ³   ³   ³   __init__.py
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄ__pycache__
+    ³   ³           0001_initial.cpython-311.pyc
+    ³   ³           __init__.cpython-311.pyc
+    ³   ³           
+    ³   ÃÄÄÄstatic
+    ³   ³   ÀÄÄÄlists
+    ³   ³       ÃÄÄÄcss
+    ³   ³       ³       table.css
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄimages
+    ³   ³       ³       asc.gif
+    ³   ³       ³       bg.gif
+    ³   ³       ³       desc.gif
+    ³   ³       ³       
+    ³   ³       ÀÄÄÄjs
+    ³   ³               jquery.tablesorter.min.js
+    ³   ³               lists.js
+    ³   ³               
+    ³   ÃÄÄÄtemplates
+    ³   ³   ÀÄÄÄlists
+    ³   ³           index.html
+    ³   ³           overview.html
+    ³   ³           todolist.html
+    ³   ³           
+    ³   ÃÄÄÄtemplatetags
+    ³   ³   ³   lists_extras.py
+    ³   ³   ³   __init__.py
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄ__pycache__
+    ³   ³           lists_extras.cpython-311.pyc
+    ³   ³           __init__.cpython-311.pyc
+    ³   ³           
+    ³   ÀÄÄÄ__pycache__
+    ³           admin.cpython-311.pyc
+    ³           forms.cpython-311.pyc
+    ³           models.cpython-311.pyc
+    ³           tests.cpython-311.pyc
+    ³           urls.cpython-311.pyc
+    ³           views.cpython-311.pyc
+    ³           __init__.cpython-311.pyc
+    ³           
+    ÀÄÄÄtodolist
+        ³   settings.py
+        ³   urls.py
+        ³   wsgi.py
+        ³   __init__.py
+        ³   
+        ÃÄÄÄstatic
+        ³   ÃÄÄÄcss
+        ³   ³       custom.css
+        ³   ³       
+        ³   ÃÄÄÄimages
+        ³   ³       favicon.png
+        ³   ³       
+        ³   ÀÄÄÄjs
+        ³           site.js
+        ³           
+        ÃÄÄÄtemplates
+        ³       403.html
+        ³       404.html
+        ³       500.html
+        ³       base.html
+        ³       
+        ÀÄÄÄ__pycache__
+                settings.cpython-311.pyc
+                urls.cpython-311.pyc
+                __init__.cpython-311.pyc
+                
