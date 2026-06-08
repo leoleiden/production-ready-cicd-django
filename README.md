@@ -1,9 +1,9 @@
 # 🚀 Production-Ready CI/CD & Kubernetes Deployment
 
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Helm](https://img.shields.io/badge/Helm-Package_Manager-0F1689?style=for-the-badge&logo=helm&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=github-actions&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-326CE5&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-Package_Manager-0F1689&logo=helm&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containers-2496ED&logo=docker&logoColor=white)
 
 **Architected and implemented by Leonid Lachmann**
 
