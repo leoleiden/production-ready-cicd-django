@@ -1,4 +1,10 @@
 # 🚀 Production-Ready CI/CD & Kubernetes Deployment
+
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-Package_Manager-0F1689?style=for-the-badge&logo=helm&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
 **Architected and implemented by Leonid Lachmann**
 
 This repository showcases a comprehensive, enterprise-grade CI/CD pipeline and Kubernetes deployment strategy for a monolithic Django web application. It transitions traditional deployments into a modern, automated, and scalable cloud-native workflow utilizing GitHub Actions, Docker, and Helm.
