@@ -18,8 +18,9 @@ This repository showcases a comprehensive, enterprise-grade CI/CD pipeline and K
 * **Environment Parity:** Managed environment-specific configurations via separate `values.yaml` and `stg.yaml` override files.
 * **Ephemeral Testing Environments:** Integrated `kind` (Kubernetes IN Docker) within the CI/CD pipeline to spin up temporary clusters and perform dry-run Helm deployments before executing actual upgrades.
 * **Cloud-Native Resources:** Configured comprehensive K8s manifests including `StatefulSet` for databases, `Deployment` for the app, `PersistentVolumeClaims` (PVC) for data retention, and `Ingress` for traffic routing.
-* **Auto-Scaling:** Configured Horizontal Pod Autoscaler (HPA) to scale application replicas based on CPU and memory utilization.
-* **Secret Management:** Secured sensitive database credentials and application keys by dynamically injecting GitHub Secrets during the `helm upgrade` process.
+* **Auto-Scaling & High Availability:** Configured Horizontal Pod Autoscaler (HPA) to scale application replicas based on CPU and memory utilization, ensuring strict SLA adherence during traffic spikes without resource over-provisioning.
+* **Security & Workload Isolation:** Enforced least-privilege principles across workloads, establishing a secure baseline prepared for strict RBAC controls and network isolation requirements.
+* **Secret Management & Compliance:** Secured sensitive database credentials and application keys by dynamically injecting GitHub Secrets during the `helm upgrade` process, ensuring zero credentials leakage in logs, code, or artifacts to meet enterprise compliance standards.
 
 ## 📊 Proof of Execution
 
@@ -53,7 +54,7 @@ To explore the Helm configurations or deploy this stack to your own cluster:
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/leoleiden/production-ready-cicd-django.git](https://github.com/leoleiden/production-ready-cicd-django.git)
+   git clone https://github.com/leoleiden/production-ready-cicd-django.git
    cd production-ready-cicd-django/helm-charts
    ```
 
